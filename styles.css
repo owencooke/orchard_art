@@ -75,8 +75,27 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-#image {
-    width: 400px; 
+#row {
     position: relative;
     display: flex;
+    left: 48px;
+    top: 48px;
+    width: 100%;
+}
+
+#image {
+    width: 400px;
+}
+
+#image_text {
+    position: relative;
+    height: 200px;
+    left: -48px;
+    top: 148px;
+    background-color: rgb(247, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
 }
