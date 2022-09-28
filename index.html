@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orchard Art</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="test.js"></script>
 </head>
 <body>
     <h1></h1>
@@ -33,12 +34,65 @@
             </ul>
         </div>
     </nav>
-    <div id="row">
-        <img id="image" src="test.JPG" alt="Jungle Cat Paintings">
-        <div id="image_text" class="boxed">
-            <h2> African Jungle Cats</h2>
-            <p> An exhibit designed for show at the Calgary Zoo. </p>
+    <div id="left_row">
+        <div class="container">
+            <div class="slides">
+                <img src="images/bubbles.PNG" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <img src="images/face_mask.PNG" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <img src="images/drip.PNG" style="width:100%">
+            </div>
+                
+            <a class="l" onclick="plusSlides(-1)">❮</a>
+            <a class="r" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div id="i1" class="boxed">
+                <h2> Portraits</h2>
+                <p> Artistic representations of women in different environments.
+                    Inspired by all aspects of life, infused with color. 
+                </p>
+            </div>
+            <div class="row">
+                <div class="column">
+                <img class="demo cursor" src="images/bubbles.PNG" style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/face_mask.PNG" style="width:100%" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/drip.PNG" style="width:100%" onclick="currentSlide(3)">
+                </div>
+            </div>
         </div>
     </div>
+    <!-- <div id="left_row">
+        <img src="images/bubbles.PNG">
+        <div id="i1" class="boxed">
+            <h2> Portraits</h2>
+            <p> Artistic representations of women in different environments.
+                Inspired by all aspects of life, infused with color. 
+            </p>
+        </div>
+        <img src="images/face_mask.PNG">
+    </div>
+    <div id="right_row">
+        <div id="i2" class="boxed">
+            <h2> Jungle Cats</h2>
+            <p> An art collection designed for an exhibition at the Calgary Zoo.
+                Inspired by the "Destination Africa" exhibit.
+            </p>
+        </div>
+        <img src="images/big_cat.PNG">
+    </div> -->
 </body>
 </html>
