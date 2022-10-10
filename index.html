@@ -35,7 +35,7 @@
         </div>
     </nav>
     <div id="left_row">
-        <div class="container">
+        <div id="portraits" class="container">
             <div class="slides">
                 <img src="images/bubbles.PNG" style="width:100%">
             </div>
@@ -75,24 +75,40 @@
             </div>
         </div>
     </div>
-    <!-- <div id="left_row">
-        <img src="images/bubbles.PNG">
-        <div id="i1" class="boxed">
-            <h2> Portraits</h2>
-            <p> Artistic representations of women in different environments.
-                Inspired by all aspects of life, infused with color. 
-            </p>
+    <div id="left_row">
+        <div id="cats" class="container">
+            <div id="i1" class="boxed">
+                <h2> Jungle Cats</h2>
+                <p> An art collection designed for an exhibition at the Calgary Zoo.
+                    Inspired by the "Destination Africa" exhibit.
+                </p>
+            </div>
+            <div class="row">
+                <div class="column">
+                <img class="demo cursor" src="images/cats.JPG" style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/big_cat.PNG" style="width:100%" onclick="currentSlide(2)">
+                </div>
+
+            </div>
         </div>
-        <img src="images/face_mask.PNG">
+        <div class="container">
+            <div class="slides">
+                <img src="images/cats.JPG" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <img src="images/big_cat.PNG" style="width:100%">
+            </div>
+                
+            <a class="l" onclick="plusSlides(-1)">❮</a>
+            <a class="r" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
     </div>
-    <div id="right_row">
-        <div id="i2" class="boxed">
-            <h2> Jungle Cats</h2>
-            <p> An art collection designed for an exhibition at the Calgary Zoo.
-                Inspired by the "Destination Africa" exhibit.
-            </p>
-        </div>
-        <img src="images/big_cat.PNG">
-    </div> -->
 </body>
 </html>
