@@ -1,36 +1,34 @@
-class Slideshow {
-    slideIndex
+window.onload = loadSlides;
 
-    constructor(container) {
-        this.container = document.getElementById(container);
-    }
-
-    plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    
-    currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    
-    showSlides(n) {
-        slides = container.getElementsByClassName("slides");
-        thumbs = container.getElementsByClassName("demo");
-        if (n > slides.length) slideIndex = 1
-        if (n < 1) slideIndex = slides.length
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < thumbs.length; i++) {
-            thumbs[i].className = thumbs[i].className.replace("active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        thumbs[slideIndex-1].className += "active";
+function loadSlides() {
+    slideshows = ["portraits", "cats", "shoes"];
+    //slideshows.reverse();
+    for (str of slideshows) {
+        s = document.getElementById(str);
+        s.slideIdx = 1;
+        showSlides(s.slideIdx, s);
     }
 }
 
-window.onload = function onLoad() {
-    slideIndex = 1;
-    portaits = new Slideshow("portraits");
-    portraits.showSlides(slideIndex);
+function plusSlides(n, slideshow) {
+    showSlides(slideshow.slideIdx += n, slideshow);
+}
+
+function currentSlide(n, slideshow) {
+    showSlides(slideshow.slideIdx = n, slideshow);
+}
+
+function showSlides(n, slideshow) {
+    var slides = slideshow.getElementsByClassName("slides");
+    var dots = slideshow.getElementsByClassName("demo");
+    if (n > slides.length) {slideshow.slideIdx = 1}    
+    if (n < 1) {slideshow.slideIdx = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideshow.slideIdx-1].style.display = "block";  
+    dots[slideshow.slideIdx-1].className += "active";
 }

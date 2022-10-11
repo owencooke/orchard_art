@@ -48,8 +48,8 @@
                 <img src="images/drip.PNG" style="width:100%">
             </div>
                 
-            <a class="l" onclick="plusSlides(-1)">❮</a>
-            <a class="r" onclick="plusSlides(1)">❯</a>
+            <a class="l" onclick="plusSlides(-1, portraits)">❮</a>
+            <a class="r" onclick="plusSlides(1, portraits)">❯</a>
 
             <div class="caption-container">
                 <p id="caption"></p>
@@ -64,19 +64,19 @@
             </div>
             <div class="row">
                 <div class="column">
-                <img class="demo cursor" src="images/bubbles.PNG" style="width:100%" onclick="currentSlide(1)">
+                <img class="demo cursor" src="images/bubbles.PNG" style="width:100%" onclick="currentSlide(1, portraits)">
                 </div>
                 <div class="column">
-                <img class="demo cursor" src="images/face_mask.PNG" style="width:100%" onclick="currentSlide(2)">
+                <img class="demo cursor" src="images/face_mask.PNG" style="width:100%" onclick="currentSlide(2, portraits)">
                 </div>
                 <div class="column">
-                <img class="demo cursor" src="images/drip.PNG" style="width:100%" onclick="currentSlide(3)">
+                <img class="demo cursor" src="images/drip.PNG" style="width:100%" onclick="currentSlide(3, portraits)">
                 </div>
             </div>
         </div>
     </div>
-    <div id="left_row">
-        <div id="cats" class="container">
+    <div id="right_row">
+        <div class="container">
             <div id="i1" class="boxed">
                 <h2> Jungle Cats</h2>
                 <p> An art collection designed for an exhibition at the Calgary Zoo.
@@ -85,15 +85,14 @@
             </div>
             <div class="row">
                 <div class="column">
-                <img class="demo cursor" src="images/cats.JPG" style="width:100%" onclick="currentSlide(1)">
+                <img class="demo cursor" src="images/cats.JPG" style="width:100%" onclick="currentSlide(1, cats)">
                 </div>
                 <div class="column">
-                <img class="demo cursor" src="images/big_cat.PNG" style="width:100%" onclick="currentSlide(2)">
+                <img class="demo cursor" src="images/big_cat.PNG" style="width:100%" onclick="currentSlide(2, cats)">
                 </div>
-
             </div>
         </div>
-        <div class="container">
+        <div id="cats" class="container">
             <div class="slides">
                 <img src="images/cats.JPG" style="width:100%">
             </div>
@@ -101,12 +100,63 @@
             <div class="slides">
                 <img src="images/big_cat.PNG" style="width:100%">
             </div>
-                
-            <a class="l" onclick="plusSlides(-1)">❮</a>
-            <a class="r" onclick="plusSlides(1)">❯</a>
+
+            <a class="l" onclick="plusSlides(-1, cats)">❮</a>
+            <a class="r" onclick="plusSlides(1, cats)">❯</a>
 
             <div class="caption-container">
                 <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+    <div id="left_row">
+        <div id="shoes" class="container">
+            <div class="slides">
+                <img src="images/shoe_butterfly.JPG" style="width:100%">
+            </div>
+            <div class="slides">
+                <img src="images/shoe_harry.JPG" style="width:100%">
+            </div>
+            <div class="slides">
+                <img src="images/shoe_honey.JPG" style="width:100%">
+            </div>
+            <div class="slides">
+                <img src="images/shoe_mountain.JPG" style="width:100%">
+            </div>
+            <div class="slides">
+                <img src="images/shoe_tupac_biggie.JPG" style="width:100%">
+            </div>
+
+            <a class="l" onclick="plusSlides(-1, shoes)">❮</a>
+            <a class="r" onclick="plusSlides(1, shoes)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div id="i1" class="boxed">
+                <h2>Sneakers</h2>
+                <p> Hand-painted shoes for any custom design.
+                    High quality, leather paint used to make the shoe of your dreams.
+                </p>
+            </div>
+            <div class="row">
+                <div class="column">
+                <img class="demo cursor" src="images/shoe_butterfly.JPG" style="width:100%" onclick="currentSlide(1, shoes)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/shoe_harry.JPG" style="width:100%" onclick="currentSlide(2, shoes)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/shoe_honey.JPG" style="width:100%" onclick="currentSlide(3, shoes)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/shoe_mountain.JPG" style="width:100%" onclick="currentSlide(4, shoes)">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="images/shoe_tupac_biggie.JPG" style="width:100%" onclick="currentSlide(5, shoes)">
+                </div>
             </div>
         </div>
     </div>
