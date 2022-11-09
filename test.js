@@ -1,5 +1,3 @@
-window.onload = loadSlides;
-
 function loadSlides() {
     slideshows = ["portraits", "cats", "shoes"];
     //slideshows.reverse();
@@ -32,3 +30,5 @@ function showSlides(n, slideshow) {
     slides[slideshow.slideIdx-1].style.display = "block";  
     dots[slideshow.slideIdx-1].className += "active";
 }
+
+loadSlides()
