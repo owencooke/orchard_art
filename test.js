@@ -1,34 +1,19 @@
-function loadSlides() {
-    slideshows = ["portraits", "cats", "shoes"];
-    //slideshows.reverse();
-    for (str of slideshows) {
-        s = document.getElementById(str);
-        s.slideIdx = 1;
-        showSlides(s.slideIdx, s);
+function moveSlides(slideshow, direction) {
+    // Get slideshow images
+    var imgs = slideshow.getElementsByClassName('slides');
+    imgs = imgs[0].getElementsByTagName('img');
+    // Swap image sources according to direction
+    if (direction < 0) {
+        var initial = imgs[0].src;
+        for (var i = 1; i < imgs.length; i++) {
+            imgs[i-1].src = imgs[i].src;
+        }
+        imgs[imgs.length-1].src = initial;
+    } else {
+        var final = imgs[imgs.length-1].src;
+        for (var i = imgs.length-1; i > 0; i--) {
+            imgs[i].src = imgs[i-1].src;
+        }
+        imgs[0].src = final;
     }
 }
-
-function plusSlides(n, slideshow) {
-    showSlides(slideshow.slideIdx += n, slideshow);
-}
-
-function currentSlide(n, slideshow) {
-    showSlides(slideshow.slideIdx = n, slideshow);
-}
-
-function showSlides(n, slideshow) {
-    var slides = slideshow.getElementsByClassName("slides");
-    var dots = slideshow.getElementsByClassName("demo");
-    if (n > slides.length) {slideshow.slideIdx = 1}    
-    if (n < 1) {slideshow.slideIdx = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
-    }
-    slides[slideshow.slideIdx-1].style.display = "block";  
-    dots[slideshow.slideIdx-1].className += "active";
-}
-
-loadSlides()

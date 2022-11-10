@@ -1,9 +1,10 @@
 * {
+  font-family: 'Lucida Grande', sans-serif;
   font-family: Georgia, serif;
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(247, 244, 244);
   border: 0;
   margin: 0;
   padding: 0;
@@ -11,7 +12,6 @@ body {
 
 /* HEADER */
 .header {
-  background: rgb(247, 244, 244);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,19 +26,19 @@ nav {
 }
 
 .header-logo {
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 24px;
-    color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 24px;
+  color: black;
 }
 
 .nav-links {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
 
 .nav-links:hover {
-    color: rgb(132, 220, 244);
+    color: rgb(176, 105, 242);
     transition: all 0.3s ease;
 }
 
@@ -48,150 +48,104 @@ nav {
 }
 
 .hero img {
-  max-width: 50vw;
+  max-width: 40vw;
 }
 
 .hero-title {
   flex: 1;
   background: rgba(25,57,56,1);
-  background: linear-gradient(30deg, rgba(150,57,68,1) 0%, rgb(23, 53, 54) 52%);
+  background: linear-gradient(30deg, rgba(150,57,68,1) 0%, rgb(23, 53, 54) 42%);
   text-align: right;
   padding-top: 8%;
   padding-inline: 10%;
 }
 
 .hero-title * {
-  font-family: 'Lucida Grande', sans-serif;
+  /* font-family: 'Lucida Grande', sans-serif; */
   color: rgb(247, 244, 244);
 }
 
 .hero-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: right;
   margin-top: 5%;
+  gap: 10%;
 }
 
-.hero-buttons button {
+.hero button {
   background-color: rgb(176, 105, 242);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   padding: 8px;
   padding-inline: 16px;
   border-radius: 8px;
   cursor: pointer;
+  border-color: white;
+  border-style: none;
+}
+
+.hero button:hover {
+  background-color: rgba(150,57,68,1);
+  transition: all 0.3s ease;
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-.media-button {
-  background-color: rgb(176, 105, 242);
-  font-size: 32px;
-  font-weight: bold;
-  height: auto;
-  width: auto;
-  border-radius: 8px;
-  cursor: pointer;
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 5%;
 }
 
-.container {
-    position: relative;
-    width: 700px;
-    margin: 32px;
-  }
-  
+.slide-container {
+  position: relative;
+  background-color: rgb(221, 219, 219);
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 .slides {
-    display: none;
+  background-color: rgb(221, 219, 219);;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .slides img {
-  width: 100%;
+  width: 25vw;
 }
 
-.cursor {
-    cursor: pointer;
+.slides img:nth-child(4n+1) {
+  opacity: 0.5;
 }
-  
-.l,
+
+.l, .r {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0.5vw;
+  border-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 4vw;
+  cursor: pointer;
+  position: absolute;
+  top: 43%;
+  text-align: center;
+  margin-inline: 1vw;
+}
+
 .r {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 32px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-  
-.r {
-    right: 0;
-}
-  
-.l:hover,
-.r:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+  right: 0;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-}
-  
-.column {
-    width: 15%;
-}
-  
-.demo {
-    opacity: 0.5;
-}
-  
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
-#left_row {
-    position: relative;
-    display: flex;
-    width: auto;
-    height: 500px;
-    margin: 48px;
-}
-
-#right_row {
-    position: relative;
-    display: flex;
-    width: auto;
-    height: 500px;
-    margin: 48px;
-    justify-content: right;
-}
-
-#i1 {
-    position: relative;
-    height: fit-content;
-    width: fit-content;
-    background-color: rgb(247, 244, 244);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px;
-}
-
-#i2 {
-    position: relative;
-    height: fit-content;
-    width: fit-content;
-    top: 110px;
-    background-color: rgb(247, 244, 244);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:baseline;
-    padding: 48px;
+.l:hover, .r:hover {
+  color: black;
 }
