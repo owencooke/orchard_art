@@ -1,6 +1,6 @@
 # Orchard Art
 
-A website designed for displaying the gallery of a local YEG artist.
+A website designed for displaying the gallery of a local artist.
 Visually representative of the artist's work.
 Functional features such as commission requests will be implemented.
 
