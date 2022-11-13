@@ -1,5 +1,4 @@
 * {
-  font-family: 'Lucida Grande', sans-serif;
   font-family: Georgia, serif;
 }
 
@@ -42,38 +41,60 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* HERO */
-.hero {
+/* Image-Block class */
+.img-block {
   display: flex;
 }
 
-.hero img {
+.img-block img {
   max-width: 40vw;
 }
 
-.hero-title {
+.img-block-title {
+  background: black;
   flex: 1;
-  background: rgba(25,57,56,1);
-  background: linear-gradient(30deg, rgba(150,57,68,1) 0%, rgb(23, 53, 54) 42%);
   text-align: right;
   padding-top: 8%;
   padding-inline: 10%;
-}
-
-.hero-title * {
-  /* font-family: 'Lucida Grande', sans-serif; */
   color: rgb(247, 244, 244);
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: right;
-  margin-top: 5%;
-  gap: 10%;
+.img-block h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-.hero button {
+/* Hero */
+#hero div {
+  background: rgb(23, 53, 54);
+  background: linear-gradient(30deg, rgba(150,57,68,1) 0%, rgb(23, 53, 54) 42%);
+}
+
+/* Portraits */
+#portraits {
+  flex-direction: row-reverse;
+  margin-bottom: 5%;
+}
+
+#portraits img {
+  max-width: 33vw;
+}
+
+#portraits div {
+  background: black;
+  /* background: radial-gradient(circle, rgb(230, 230, 230) 5%, #2E4D78 90%); */
+  background: linear-gradient(90deg, rgb(0, 0, 0) 10%, #2E4D78 100%);
+  text-align: left;
+  /* color: rgb(0, 0, 0); */
+  padding-inline: 3%;
+  justify-content: center;
+}
+
+/* Buttons */
+.text-button {
   background-color: rgb(176, 105, 242);
+  color: rgb(247, 244, 244);
   font-size: 16px;
   font-weight: bold;
   padding: 8px;
@@ -84,15 +105,9 @@ nav {
   border-style: none;
 }
 
-.hero button:hover {
+.text-button:hover {
   background-color: rgba(150,57,68,1);
   transition: all 0.3s ease;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  padding: 0;
 }
 
 .slideshow {
@@ -111,7 +126,6 @@ nav {
 }
 
 .slides {
-  background-color: rgb(221, 219, 219);;
   display: flex;
   justify-content: center;
   gap: 24px;
