@@ -130,24 +130,28 @@ nav {
   position: relative;
   background-color: rgb(221, 219, 219);
   max-width: 100%;
-  overflow-x: clip;
+  overflow: hidden;
 }
 
-.slides {
+#slides {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  max-width: 100%;
-  overflow-x: clip;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+  user-select: none;
 }
 
-.slides img {
-  width: 25vw;
+#slides img {
+  width: 20vw;
 }
 
-.slides img:nth-child(4n+1) {
+#slides img:nth-child(2n) {
+  opacity: 0.75;
+}
+
+#slides img:nth-child(4n+1) {
   opacity: 0.5;
 }
 
@@ -170,4 +174,19 @@ nav {
 
 .l:hover, .r:hover {
   color: black;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden-panel {
+    transform: translateX(-100%);
+    transition: all 1s ease 0.3s;
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  .show {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
 }

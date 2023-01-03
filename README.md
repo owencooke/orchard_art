@@ -5,7 +5,7 @@ Visually representative of the artist's work.
 Functional features such as commission requests will be implemented.
 
 ## Current Progress
-Only footer remains for landing page to be completed.
+Finalizing landing page by adding CSS animations and slideshow scroll functionality.
 
 ## Future Goals
 - Available painting page

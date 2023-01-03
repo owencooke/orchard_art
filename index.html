@@ -7,7 +7,7 @@
   <title>Orchard Art</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-  <script src="test.js"></script>
+  <script defer src="test.js"></script>
 </head>
 <body>
   <div class="header">
@@ -20,14 +20,14 @@
     </nav>
   </div>
 
-  <div id="hero" class="img-block">
-    <img src="images/artist2.jpg"><img>
+  <div id="hero" class="img-block hidden-panel">
+    <img src="images/artist2.jpg" draggable="false"><img>
     <div class="img-block-title">
       <h1>Bye-Bye Pink Panther, Hello Pink Leopard!</h1>
       <p>An art piece designed for an exhibition at the Calgary Zoo,
         inspired by their "Destination Africa" exhibit.
       </p>
-      <button class="text-button">View available pieces</button>
+      <button class="text-button hidden">View available pieces</button>
     </div>
   </div>
 
@@ -37,24 +37,24 @@
       <button class="text-button">Request a commission</button>
     </div>
     <div id="shoes" class="slide-container">
-      <div class="slides">
-        <img src="images/shoe_butterfly.JPG">
-        <img src="images/shoe_honey.JPG">
-        <img src="images/shoe_harry.JPG">
-        <img src="images/shoe_mountain.JPG">
-        <img src="images/shoe_tupac_biggie.JPG">
+      <div id="slides" data-slide-percentage="0">
+        <img class="slide-img hidden" src="images/shoe_butterfly.JPG" draggable="false">
+        <img class="slide-img hidden" src="images/shoe_honey.JPG" draggable="false">
+        <img class="slide-img hidden" src="images/shoe_harry.JPG" draggable="false">
+        <img class="slide-img hidden" src="images/shoe_mountain.JPG" draggable="false">
+        <img class="slide-img hidden" src="images/shoe_tupac_biggie.JPG" draggable="false">
       </div>
-      <button class="l" onclick="moveSlides(shoes, -1)">
+      <button class="l" onclick="moveSlides(-1)">
         <i class="fa fa-caret-left"></i>
       </button>
-      <button class="r" onclick="moveSlides(shoes, 1)">
+      <button class="r" onclick="moveSlides(1)">
         <i class="fa fa-caret-right"></i>
       </button>
     </div>
   </div>
 
-  <div id="portraits" class="img-block">
-    <img src="images/drip.PNG"><img>
+  <div id="portraits" class="img-block hidden-panel">
+    <img src="images/drip.PNG" draggable="false"><img>
     <div class="img-block-title">
       <h1>Stunning Portraits</h1>
       <p>Vivid acrylic portraits depicted on large canvases,
@@ -62,7 +62,7 @@
       </p>
       <button class="text-button">View gallery</button>
     </div>
-    <img src="images/bubbles.PNG"><img>
+    <img src="images/bubbles.PNG" draggable="false"><img>
   </div>
 </body>
 </html>
