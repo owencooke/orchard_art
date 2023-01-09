@@ -135,24 +135,15 @@ nav {
 
 #slides {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   gap: 32px;
   padding-top: 32px;
   padding-bottom: 32px;
-  position: relative;
   user-select: none;
 }
 
-#slides img {
+.shoe {
   width: 20vw;
-}
-
-#slides img:nth-child(2n) {
-  opacity: 0.75;
-}
-
-#slides img:nth-child(4n+1) {
-  opacity: 0.5;
 }
 
 .l, .r {
