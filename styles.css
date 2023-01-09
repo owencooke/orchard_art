@@ -135,7 +135,7 @@ nav {
 
 #slides {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 32px;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -179,7 +179,7 @@ nav {
 @media (prefers-reduced-motion: no-preference) {
   .hidden-panel {
     transform: translateX(-100%);
-    transition: all 1s ease 0.3s;
+    transition: all 1s ease 0.7s;
     opacity: 0;
     filter: blur(5px);
   }

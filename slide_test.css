@@ -1,0 +1,54 @@
+* {
+  font-family: Georgia, serif;
+}
+
+body {
+  background-color: rgb(247, 244, 244);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-container {
+  position: relative;
+  background-color: rgb(221, 219, 219);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#slides {
+  display: flex;
+  background-color: rgb(200, 151, 180);
+  /* justify-content: center; */
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* position: relative; */
+  user-select: none;
+  /* transform: translateX(-75%); */
+}
+
+.shoe {
+  width: 20vw;
+}
+
+.l, .r {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0.5vw;
+  border-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 4vw;
+  cursor: pointer;
+  position: absolute;
+  top: 43%;
+  text-align: center;
+  margin-inline: 1vw;
+}
+
+.r {
+  right: 0;
+}
+
+.l:hover, .r:hover {
+  color: black;
+}
