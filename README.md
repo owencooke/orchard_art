@@ -5,8 +5,7 @@ Visually representative of the artist's work.
 Functional features such as commission requests will be implemented.
 
 ## Current Progress
-Finalizing landing page by adding interactive CSS animations.
-Beginning development of the contact page. 
+Converting website to use React, so that reusable components can be utilized for the sneakers/paintings pages. 
 
 ## Future Goals
 - Available painting page
