@@ -1,27 +1,41 @@
 import { React, useState } from 'react';
 import "./Home.css"
 import Carousel from 'react-simply-carousel';
+import InstantPhoto from '../components/InstantPhoto';
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
-
-  // function importAll(r) {
-  //   return r.keys().map(r);
-  // }
   
-  const images = require.context('./', true, /\.JPG$/);
-  console.log(images)
+  function getImages() {
+    var images = [
+      "butterfly",
+      "drip",
+      "harry",
+      "honey",
+      "mountain",
+      "nhl",
+      "tupac_biggie"
+    ]
+
+    for (var i = 0; i < images.length; i++) {
+      images[i] = "/assets/shoes/" + images[i] + ".JPG"
+    }
+    return images
+  }
+
+  // const [images, setImages] = useState(() => getImages());
+  const images = getImages();
 
   return (
     <div>
-      <div id="hero" class="img-block">
+      <div id="hero" className="img-block">
         <img src="/assets/artist2.jpg" draggable="false" alt=""/>
-        <div class="img-block-title">
+        <div className="img-block-title">
           <h1>Bye-Bye Pink Panther, Hello Pink Leopard!</h1>
           <p>An art piece designed for an exhibition at the Calgary Zoo,
             inspired by their "Destination Africa" exhibit.
           </p>
-          <button class="text-button hidden">View available pieces</button>
+          <button className="text-button hidden">View available pieces</button>
         </div>
       </div>
 
@@ -29,7 +43,10 @@ export default function Home() {
         containerProps={{
           style: {
             width: "100%",
+            height: "400px",
+            backgroundColor: "#e0e0e0",
             justifyContent: "space-between",
+            alignItems: "center",
             userSelect: "none"
           }
         }}
@@ -78,32 +95,34 @@ export default function Home() {
         itemsToShow={5}
         speed={400}
       >
-        {Array.from({ length: 10 }).map((item, index) => (
-          <div
+        {images.map((image, index) => (
+          <div 
             style={{
-              background: "yellow",
-              width: 300,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               height: 300,
-              border: "30px solid white",
-              textAlign: "center",
-              lineHeight: "240px",
-              boxSizing: "border-box"
+              width: 300,
+              boxSizing: "border-box",
+              border: "32px solid transparent",
             }}
-            key={index}
           >
-            {index}
+            <InstantPhoto
+              key={index}
+              img={image}
+            />
           </div>
         ))}
       </Carousel>
 
-      <div id="portraits" class="img-block">
+      <div id="portraits" className="img-block">
         <img src="../assets/drip.PNG" draggable="false" alt=""/>
-        <div class="img-block-title">
+        <div className="img-block-title">
           <h1>Stunning Portraits</h1>
           <p>Vivid acrylic portraits depicted on large canvases,
             while incorporating an incredibly depth range of mediums.
           </p>
-          <button class="text-button">View gallery</button>
+          <button className="text-button">View gallery</button>
         </div>
         <img src="./assets/bubbles.PNG" draggable="false" alt=""/>
       </div>
