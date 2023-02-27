@@ -1,10 +1,6 @@
-import {React, useState} from 'react';
+import React from 'react';
 
 export default function InstantPhoto(props) {
-  // const [frameStyle, setFrameStyle] = useState(() => defaultStyle());
-  // const frameStyle = defaultStyle();
-  const [isZoomed, setIsZoomed] = useState(false);
-
   const defaultStyle = {
     backgroundColor: "white",
     height: 250,
@@ -23,13 +19,11 @@ export default function InstantPhoto(props) {
     alignItems: "center",
   }
 
-  function handleClick() {
-    setIsZoomed(prev => !prev)
-  }
-
   const imageStyle = {
     width: "100%",
-    height: "auto"
+    height: "auto",
+    userSelect: "none",
+    draggable: false
   }
 
   const imageContainerStyle = {
@@ -42,7 +36,7 @@ export default function InstantPhoto(props) {
   }
 
   return (
-    <div style={isZoomed ? zoomStyle : defaultStyle} onClick={handleClick} className='frame'>
+    <div style={props.zoomed ? zoomStyle : defaultStyle} onClick={() => props.onClick(props.img)} className='frame'>
       <div style={imageContainerStyle}>
         <img style={imageStyle} src={props.img} alt=""></img>
       </div>
