@@ -2,34 +2,15 @@ import { React, useState } from 'react';
 import "./Home.css"
 import Carousel from 'react-simply-carousel';
 import InstantPhoto from '../components/InstantPhoto';
+import { shoes } from '../galleries';
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
-  
-  function getImages() {
-    var images = [
-      "butterfly",
-      "drip",
-      "harry",
-      "honey",
-      "mountain",
-      "nhl",
-      "tupac_biggie"
-    ]
-
-    for (var i = 0; i < images.length; i++) {
-      images[i] = "/assets/shoes/" + images[i] + ".JPG"
-    }
-    return images
-  }
-
-  // const [images, setImages] = useState(() => getImages());
-  const images = getImages();
 
   return (
     <div>
       <div id="hero" className="img-block">
-        <img src="/assets/artist2.jpg" draggable="false" alt=""/>
+        <img src={require("../assets/artist2.jpg")} draggable="false" alt=""/>
         <div className="img-block-title">
           <h1>Bye-Bye Pink Panther, Hello Pink Leopard!</h1>
           <p>An art piece designed for an exhibition at the Calgary Zoo,
@@ -95,8 +76,9 @@ export default function Home() {
         itemsToShow={5}
         speed={400}
       >
-        {images.map((image, index) => (
-          <div 
+        {shoes.map((image, index) => (
+          <div
+            key={index}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -107,16 +89,13 @@ export default function Home() {
               border: "32px solid transparent",
             }}
           >
-            <InstantPhoto
-              key={index}
-              img={image}
-            />
+            <InstantPhoto img={image} />
           </div>
         ))}
       </Carousel>
 
       <div id="portraits" className="img-block">
-        <img src="../assets/drip.PNG" draggable="false" alt=""/>
+        <img src={require("../assets/paintings/drip.PNG")} draggable="false" alt=""/>
         <div className="img-block-title">
           <h1>Stunning Portraits</h1>
           <p>Vivid acrylic portraits depicted on large canvases,
@@ -124,7 +103,7 @@ export default function Home() {
           </p>
           <button className="text-button">View gallery</button>
         </div>
-        <img src="./assets/bubbles.PNG" draggable="false" alt=""/>
+        <img src={require("../assets/paintings/bubbles.PNG")} draggable="false" alt=""/>
       </div>
     </div>
   )
