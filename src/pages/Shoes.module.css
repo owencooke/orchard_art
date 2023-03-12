@@ -1,0 +1,16 @@
+.gallery {
+  display: grid;
+  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  zoom: 1.5
+}

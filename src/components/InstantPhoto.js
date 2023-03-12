@@ -10,15 +10,6 @@ export default function InstantPhoto(props) {
     paddingBottom: 72
   }
 
-  const zoomStyle = {
-    ...defaultStyle,
-    position: "absolute",
-    height: 500,
-    width: 500,
-    justifyContent: "center",
-    alignItems: "center",
-  }
-
   const imageStyle = {
     width: "100%",
     height: "auto",
@@ -36,7 +27,7 @@ export default function InstantPhoto(props) {
   }
 
   return (
-    <div style={props.zoomed ? zoomStyle : defaultStyle} onClick={() => props.onClick(props.img)} className='frame'>
+    <div style={defaultStyle} className='frame'>
       <div style={imageContainerStyle}>
         <img style={imageStyle} src={props.img} alt=""></img>
       </div>
